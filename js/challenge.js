@@ -5,12 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const heart = document.getElementById("heart");
   const pause = document.getElementById("pause");
   const commentForm = document.getElementById("comment-form");
+
+  let i = -1
+  let j = 0
+  
   
   
   function plusOne(){
-      let counter = parseInt(count.textContent, 10);
-      counter += 1;
-      count.textContent = counter;
+    i++;
+    count.textContent = i;
+    j = 0
     }
     
     let timer = setInterval(plusOne,1000);
@@ -26,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       count.innerHTML = i;
       i += 1;
     });
+
 
     heart.addEventListener("click", function () {
       j++;
